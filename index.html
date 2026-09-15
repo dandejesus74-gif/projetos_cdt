@@ -54,6 +54,13 @@
             font-weight: 800;
             color: var(--light);
             text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
         }
 
         .logo span {
@@ -537,7 +544,7 @@
 
     <!-- CABEÇALHO -->
     <header>
-        <div class="logo">RH <span>Fitness</span></div>
+        <a href="#home" class="logo">RH <span>Fitness</span></a>
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
