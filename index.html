@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #d4af37;
-            --primary-dark: #a67c00;
-            --accent: #f5d76e;
-            --dark: #050505;
-            --dark-card: #101010;
-            --dark-surface: #191919;
-            --gray: #b9b9b9;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #090a0f;
+            --dark-card: #131620;
+            --dark-surface: #181c29;
+            --gray: #94a3b8;
             --danger: #ef4444;
             --success: #22c55e;
             --warning: #f59e0b;
@@ -38,7 +37,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(6, 9, 20, 0.94);
+            background: rgba(9, 10, 15, 0.95);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -112,7 +111,7 @@
 
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(4, 8, 22, 0.62), rgba(3, 7, 18, 0.94)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(9, 10, 15, 0.7), rgba(9, 10, 15, 0.9)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -285,7 +284,7 @@
         /* PAINEL ADMIN (OCULTO POR PADRÃO) */
         #admin-section {
             display: none;
-            background: #0a0a0a;
+            background: #0e1017;
         }
 
         .admin-login-box {
@@ -390,6 +389,25 @@
             transition: background 0.2s;
         }
         .btn-acao:hover { background: var(--danger); color: white; }
+
+        .btn-exportar {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-exportar:hover {
+            background: var(--success);
+            color: white;
+        }
 
         .contact-container {
             display: flex;
@@ -616,7 +634,7 @@
             transition: background 0.3s;
         }
 
-        footer { background: #020202; text-align: center; padding: 20px; color: var(--gray); font-size: 12px; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { background: #050608; text-align: center; padding: 20px; color: var(--gray); font-size: 12px; border-top: 1px solid rgba(255,255,255,0.05); }
 
         /* MEDIA QUERIES PARA CELULAR */
         @media (max-width: 768px) {
@@ -676,210 +694,17 @@
                 height: 400px;
             }
         }
-
-        /* COMPONENTES REUTILIZÁVEIS */
-        .btn-hero {
-            padding: 14px 32px;
-            font-size: 15px;
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            padding: 4px 16px;
-            font-size: 11px;
-            font-weight: 700;
-            border-radius: 20px;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-
-        .btn-escolher-plano {
-            display: block;
-            width: 100%;
-            text-align: center;
-            border-radius: 8px;
-        }
-
-        .chat-btn {
-            border: none;
-        }
-
-        .chat-container.ativo {
-            display: flex;
-        }
-
-        .imc-box {
-            max-width: 450px;
-            margin: 0 auto;
-            background: var(--dark-card);
-            padding: 25px;
-            border-radius: 14px;
-            border: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .form-group:last-of-type {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            font-size: 13px;
-            color: var(--gray);
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            background: var(--dark);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: white;
-            border-radius: 8px;
-        }
-
-        .btn-imc {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-imc:hover {
-            background: var(--primary-dark);
-        }
-
-        .admin-icon {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .admin-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .admin-description {
-            color: var(--gray);
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        .admin-heading {
-            font-size: 16px;
-        }
-
-        .admin-heading i {
-            color: var(--primary);
-        }
-
-        .stat-active { color: var(--success) !important; }
-        .stat-pending { color: var(--warning) !important; }
-        .stat-auto { color: var(--primary) !important; }
-
-        .logout-button {
-            background: rgba(255,255,255,0.1);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-        }
-
-        .feedback-icon {
-            font-size: 26px;
-            color: var(--primary);
-        }
-
-        .footer { background: #020202; text-align: center; padding: 20px; color: var(--gray); font-size: 12px; border-top: 1px solid rgba(255,255,255,0.05); }
-
-
-        /* ===== ACABAMENTO VISUAL — NOVA PALETA ===== */
-        .logo span,
-        .hero h1 span,
-        .section-title span,
-        .plan-card .price,
-        .chat-header h4 i,
-        .admin-heading i,
-        .plan-card ul li i {
-            color: var(--primary);
-        }
-
-        .btn-matricula,
-        .btn-hero,
-        .btn-escolher-plano,
-        .btn-imc,
-        .chat-input-area button {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.22);
-        }
-
-        .btn-matricula:hover,
-        .btn-hero:hover,
-        .btn-escolher-plano:hover,
-        .btn-imc:hover,
-        .chat-input-area button:hover {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.28);
-        }
-
-        .plan-card.active {
-            border-color: var(--primary);
-            box-shadow:
-                0 0 0 1px rgba(212, 175, 55, 0.15),
-                0 0 35px rgba(212, 175, 55, 0.18);
-        }
-
-        .about-img,
-        .plan-card,
-        .admin-login-box,
-        .admin-panel,
-        .imc-box,
-        .chat-container {
-            border-color: rgba(212, 175, 55, 0.12);
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus,
-        .chat-input-area input:focus {
-            border-color: var(--primary) !important;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.10);
-        }
-
-        .popular-badge {
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            box-shadow: 0 6px 18px rgba(139, 92, 246, 0.24);
-        }
-
-        .chat-btn {
-            background: linear-gradient(135deg, var(--primary-dark), var(--accent));
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.28);
-        }
-
     </style>
 </head>
 <body>
 
     <!-- CHATBOT FLUTUANTE -->
-    <button class="chat-btn" id="chatBtnToggle" type="button" aria-label="Abrir assistente virtual"><i class="fa-solid fa-comments"></i></button>
+    <div class="chat-btn" id="chatBtnToggle"><i class="fa-solid fa-comments"></i></div>
 
-    <div class="chat-container" id="chatContainer" aria-hidden="true">
+    <div class="chat-container" id="chatContainer">
         <div class="chat-header">
             <h4><i class="fa-solid fa-robot"></i> Assistente RH Fitness</h4>
-            <button class="close-chat" id="chatCloseBtn" type="button" aria-label="Fechar chat">&times;</button>
+            <button class="close-chat" id="chatCloseBtn">&times;</button>
         </div>
         <div class="chat-messages" id="chatMessages">
             <div class="message bot">Fala, maromba! Sou o assistente virtual da RH Fitness. Posso tirar dúvidas sobre treinos, planos, horários e suplementos. Como posso ajudar?</div>
@@ -912,7 +737,7 @@
     <section id="home" class="hero">
         <h1>Supere Seus Limites na <span>RH Fitness</span></h1>
         <p>Estrutura completa, equipamentos de alta tecnologia e acompanhamento profissional para você alcançar a sua melhor versão.</p>
-        <a href="#contato" class="btn-matricula btn-hero">Comece Agora</a>
+        <a href="#contato" class="btn-matricula" style="padding: 14px 32px; font-size: 15px;">Comece Agora</a>
     </section>
 
     <!-- SOBRE -->
@@ -928,12 +753,12 @@
     </section>
 
     <!-- MODALIDADES -->
-    <section id="modalidades" style="background: #0a0a0a;">
+    <section id="modalidades" style="background: #0e1017;">
         <h2 class="section-title">Nossas <span>Modalidades</span></h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-video-container">
-                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Musculação" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Musculação">
                 </div>
                 <div class="service-content">
                     <div>
@@ -945,7 +770,7 @@
 
             <div class="service-card">
                 <div class="service-video-container">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Treinamento Funcional" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Treinamento Funcional">
                 </div>
                 <div class="service-content">
                     <div>
@@ -957,7 +782,7 @@
 
             <div class="service-card">
                 <div class="service-video-container">
-                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" alt="Cardio Avançado" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" alt="Cardio Avançado">
                 </div>
                 <div class="service-content">
                     <div>
@@ -980,7 +805,7 @@
                     <li><i class="fa-solid fa-check"></i> Acesso livre à musculação</li>
                     <li><i class="fa-solid fa-check"></i> Horário flexível</li>
                 </ul>
-                <button class="btn-matricula btn-escolher-plano" data-plano="Plano Mensal (R$ 90,00/mês)">Escolher Plano</button>
+                <button class="btn-matricula btn-escolher-plano" data-plano="Plano Mensal (R$ 90,00/mês)" style="display: block; width: 100%; text-align: center; border-radius: 8px;">Escolher Plano</button>
             </div>
 
             <div class="plan-card active">
@@ -992,7 +817,7 @@
                     <li><i class="fa-solid fa-check"></i> Acompanhamento com instrutores</li>
                     <li><i class="fa-solid fa-check"></i> Congele por até 30 dias</li>
                 </ul>
-                <button class="btn-matricula btn-escolher-plano" data-plano="Plano Semestral (R$ 150,00/mês)">Escolher Plano</button>
+                <button class="btn-matricula btn-escolher-plano" data-plano="Plano Semestral (R$ 150,00/mês)" style="display: block; width: 100%; text-align: center; border-radius: 8px;">Escolher Plano</button>
             </div>
 
             <div class="plan-card">
@@ -1002,7 +827,7 @@
                     <li><i class="fa-solid fa-check"></i> Todos os benefícios inclusos</li>
                     <li><i class="fa-solid fa-check"></i> Camisa exclusiva RH Fitness</li>
                 </ul>
-                <button class="btn-matricula btn-escolher-plano" data-plano="Plano Anual VIP (R$ 250,00/mês)">Escolher Plano</button>
+                <button class="btn-matricula btn-escolher-plano" data-plano="Plano Anual VIP (R$ 250,00/mês)" style="display: block; width: 100%; text-align: center; border-radius: 8px;">Escolher Plano</button>
             </div>
         </div>
     </section>
@@ -1013,20 +838,23 @@
         
         <!-- TELA DE LOGIN DO ADMIN -->
         <div class="admin-login-box" id="adminLoginBox">
-            <i class="fa-solid fa-lock admin-icon"></i>
-            <h3 class="admin-title">Acesso Restrito</h3>
-            <p class="admin-description">Insira as credenciais de acesso</p>
-            <input type="text" id="adminUser" placeholder="Usuário" autocomplete="username">
-            <input type="password" id="adminPassword" placeholder="Senha" autocomplete="current-password">
-            <button class="btn-matricula btn-full" id="btnLoginAdmin" type="button">Entrar no Painel</button>
+            <i class="fa-solid fa-lock" style="font-size: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+            <h3 style="font-size: 18px; margin-bottom: 10px;">Acesso Restrito</h3>
+            <p style="color: var(--gray); font-size: 13px; margin-bottom: 20px;">Insira as credenciais de acesso</p>
+            <input type="text" id="adminUser" placeholder="Usuário (Ex: root)">
+            <input type="password" id="adminPassword" placeholder="Senha (Ex: master)">
+            <button class="btn-matricula" id="btnLoginAdmin" style="width: 100%;">Entrar no Painel</button>
             <p id="adminLoginError" style="color: var(--danger); font-size: 12px; margin-top: 10px; display: none;">Usuário ou senha incorretos!</p>
         </div>
 
         <!-- PAINEL DE GESTÃO -->
         <div class="admin-panel" id="adminPanel">
             <div class="admin-header-flex">
-                <h3 class="admin-heading"><i class="fa-solid fa-users-gear"></i> Gestão de Alunos e Matrículas</h3>
-                <button class="btn-acao logout-button" id="btnLogoutAdmin" type="button">Sair do Painel</button>
+                <h3 style="font-size: 16px;"><i class="fa-solid fa-users-gear" style="color: var(--primary);"></i> Gestão de Alunos e Matrículas</h3>
+                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                    <button class="btn-exportar" id="btnExportarJson"><i class="fa-solid fa-download"></i> Exportar JSON</button>
+                    <button class="btn-acao" id="btnLogoutAdmin" style="background: rgba(255,255,255,0.1); color: white; border: none; padding: 6px 12px;">Sair do Painel</button>
+                </div>
             </div>
 
             <div class="admin-stats">
@@ -1036,15 +864,15 @@
                 </div>
                 <div class="stat-card">
                     <h5>Ativos</h5>
-                    <span id="statAtivos" class="stat-active">0</span>
+                    <span id="statAtivos" style="color: var(--success);">0</span>
                 </div>
                 <div class="stat-card">
                     <h5>Pendentes</h5>
-                    <span id="statPendentes" class="stat-pending">0</span>
+                    <span id="statPendentes" style="color: var(--warning);">0</span>
                 </div>
                 <div class="stat-card">
                     <h5>Débito Automático</h5>
-                    <span id="statDebito" class="stat-auto">0</span>
+                    <span id="statDebito" style="color: var(--primary);">0</span>
                 </div>
             </div>
 
@@ -1069,9 +897,9 @@
     </section>
 
     <!-- CALCULADORA IMC -->
-    <section id="calculadora" style="background: #0a0a0a; text-align: center;">
+    <section id="calculadora" style="background: #0e1017; text-align: center;">
         <h2 class="section-title">Calculadora de <span>IMC</span></h2>
-        <div class="imc-box">
+        <div style="max-width: 450px; margin: 0 auto; background: var(--dark-card); padding: 25px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.06);">
             <div style="margin-bottom: 15px; text-align: left;">
                 <label style="font-size: 13px; color: var(--gray); display: block; margin-bottom: 6px;">Peso (kg)</label>
                 <input type="number" id="peso" placeholder="Ex: 70" step="0.1" style="width: 100%; padding: 12px; background: var(--dark); border: 1px solid rgba(255,255,255,0.08); color: white; border-radius: 8px;">
@@ -1080,7 +908,7 @@
                 <label style="font-size: 13px; color: var(--gray); display: block; margin-bottom: 6px;">Altura (m)</label>
                 <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" style="width: 100%; padding: 12px; background: var(--dark); border: 1px solid rgba(255,255,255,0.08); color: white; border-radius: 8px;">
             </div>
-            <button id="btnCalcularIMC" class="btn-imc" type="button">Calcular IMC</button>
+            <button id="btnCalcularIMC" style="width: 100%; background: var(--primary); color: white; border: none; padding: 12px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background 0.3s;">Calcular IMC</button>
             <div id="resultado-imc" style="margin-top: 20px; font-size: 14px; font-weight: 600;"></div>
         </div>
     </section>
@@ -1097,9 +925,9 @@
             </div>
             
             <form class="contact-form" id="contactForm">
-                <input type="text" id="inputNome" placeholder="Seu Nome Completo" autocomplete="name" required>
-                <input type="text" id="inputCpf" placeholder="CPF (Ex: 000.000.000-00)" inputmode="numeric" autocomplete="off" maxlength="14" required>
-                <input type="email" id="inputEmail" placeholder="Seu E-mail" autocomplete="email" required>
+                <input type="text" id="inputNome" placeholder="Seu Nome Completo" required>
+                <input type="text" id="inputCpf" placeholder="CPF (Ex: 000.000.000-00)" required>
+                <input type="email" id="inputEmail" placeholder="Seu E-mail" required>
                 
                 <select id="planoSelecionado" required>
                     <option value="" disabled selected>Plano Selecionado</option>
@@ -1125,7 +953,7 @@
     <!-- FEEDBACK SUCESSO / NOTIFICAÇÃO -->
     <div id="feedback-sucesso">
         <div class="pix-success-badge" id="badgeFeedback"><i class="fa-solid fa-check-circle"></i> <span id="badgeText">Matrícula Realizada!</span></div>
-        <i class="fa-solid fa-circle-check feedback-icon" id="iconFeedback"></i>
+        <i class="fa-solid fa-circle-check" id="iconFeedback" style="font-size: 26px; color: var(--primary);"></i>
         <span id="textoFeedback">Bem-vindo à RH Fitness. Seu acesso já está liberado!</span>
         
         <div class="supine-animation-container">
@@ -1148,423 +976,308 @@
         </div>
     </div>
 
-    <footer class="footer"><p>&copy; 2026 Academia RH Fitness. Todos os direitos reservados.</p></footer>
+    <footer><p>&copy; 2026 Academia RH Fitness. Todos os direitos reservados.</p></footer>
 
     <!-- SCRIPTS -->
     <script>
-        'use strict';
-
-        // =========================
-        // CONFIGURAÇÕES
-        // =========================
-        const CONFIG = {
-            storageKey: 'rh_alunos',
-            adminUser: 'root',
-            adminPassword: 'master',
-            feedbackDuration: 4800,
-            botDelay: 500
-        };
-
-        // =========================
-        // ESTADO
-        // =========================
-        const alunosPadrao = [
-            {
-                id: 1,
-                nome: 'Carlos Silva',
-                cpf: '123.456.789-00',
-                plano: 'Plano Semestral (R$ 150,00/mês)',
-                pagamento: 'Cartão (Débito Automático)',
-                status: 'ativo'
-            },
-            {
-                id: 2,
-                nome: 'Ana Souza',
-                cpf: '987.654.321-11',
-                plano: 'Plano Mensal (R$ 90,00/mês)',
-                pagamento: 'Boleto Bancário',
-                status: 'pendente'
-            }
+        // BANCO DE DADOS LOCAL DE ALUNOS
+        let listaAlunos = JSON.parse(localStorage.getItem('rh_alunos')) || [
+            { id: 1, nome: "Carlos Silva", cpf: "123.456.789-00", plano: "Plano Semestral (R$ 150,00/mês)", pagamento: "Cartão (Débito Automático)", status: "ativo" },
+            { id: 2, nome: "Ana Souza", cpf: "987.654.321-11", plano: "Plano Mensal (R$ 90,00/mês)", pagamento: "Boleto Bancário", status: "pendente" }
         ];
 
-        let listaAlunos = carregarAlunos();
-
-        // =========================
-        // HELPERS
-        // =========================
-        const $ = (selector) => document.querySelector(selector);
-        const $$ = (selector) => document.querySelectorAll(selector);
-
-        function carregarAlunos() {
-            try {
-                const dados = localStorage.getItem(CONFIG.storageKey);
-                return dados ? JSON.parse(dados) : [...alunosPadrao];
-            } catch (error) {
-                console.error('Erro ao carregar alunos:', error);
-                return [...alunosPadrao];
-            }
-        }
-
         function salvarAlunos() {
-            localStorage.setItem(CONFIG.storageKey, JSON.stringify(listaAlunos));
+            localStorage.setItem('rh_alunos', JSON.stringify(listaAlunos));
             atualizarTabelaAdmin();
         }
 
-        function escaparHTML(valor) {
-            return String(valor)
-                .replaceAll('&', '&amp;')
-                .replaceAll('<', '&lt;')
-                .replaceAll('>', '&gt;')
-                .replaceAll('"', '&quot;')
-                .replaceAll("'", '&#039;');
-        }
+        // CLIQUE DUPLO NA LOGO PARA EXIBIR O PAINEL ADMIN
+        const logoAdminTrigger = document.getElementById('logoAdminTrigger');
+        const adminSection = document.getElementById('admin-section');
 
-        function mostrarFeedback(mensagem, badge = 'Matrícula Realizada!', duracao = CONFIG.feedbackDuration) {
-            const feedback = $('#feedback-sucesso');
-            const badgeText = $('#badgeText');
-            const textoFeedback = $('#textoFeedback');
-
-            badgeText.textContent = badge;
-            textoFeedback.innerHTML = mensagem;
-            feedback.classList.add('mostrar');
-
-            window.clearTimeout(feedback._timer);
-            feedback._timer = window.setTimeout(() => {
-                feedback.classList.remove('mostrar');
-            }, duracao);
-        }
-
-        function normalizarTexto(texto) {
-            return texto
-                .toLowerCase()
-                .normalize('NFD')
-                .replace(/[\u0300-\u036f]/g, '');
-        }
-
-        // =========================
-        // PAINEL ADMINISTRATIVO
-        // =========================
-        const logoAdminTrigger = $('#logoAdminTrigger');
-        const adminSection = $('#admin-section');
-        const adminLoginBox = $('#adminLoginBox');
-        const adminPanel = $('#adminPanel');
-        const btnLoginAdmin = $('#btnLoginAdmin');
-        const adminUser = $('#adminUser');
-        const adminPassword = $('#adminPassword');
-        const adminLoginError = $('#adminLoginError');
-        const btnLogoutAdmin = $('#btnLogoutAdmin');
-
-        logoAdminTrigger.addEventListener('dblclick', (event) => {
-            event.preventDefault();
+        logoAdminTrigger.addEventListener('dblclick', (e) => {
+            e.preventDefault();
             adminSection.style.display = 'block';
             adminSection.scrollIntoView({ behavior: 'smooth' });
         });
 
-        btnLoginAdmin.addEventListener('click', () => {
-            const acessoValido =
-                adminUser.value === CONFIG.adminUser &&
-                adminPassword.value === CONFIG.adminPassword;
+        // MENU MOBILE TOGGLE CORRIGIDO
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-            if (!acessoValido) {
-                adminLoginError.style.display = 'block';
-                return;
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('ativo');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('ativo');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('ativo');
             }
-
-            adminLoginBox.style.display = 'none';
-            adminPanel.style.display = 'block';
-            adminLoginError.style.display = 'none';
-            atualizarTabelaAdmin();
         });
 
-        adminPassword.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') btnLoginAdmin.click();
+        // AUTENTICAÇÃO DO PAINEL ADMIN (ROOT / MASTER)
+        const adminLoginBox = document.getElementById('adminLoginBox');
+        const adminPanel = document.getElementById('adminPanel');
+        const btnLoginAdmin = document.getElementById('btnLoginAdmin');
+        const adminUser = document.getElementById('adminUser');
+        const adminPassword = document.getElementById('adminPassword');
+        const adminLoginError = document.getElementById('adminLoginError');
+        const btnLogoutAdmin = document.getElementById('btnLogoutAdmin');
+
+        btnLoginAdmin.addEventListener('click', () => {
+            if (adminUser.value === 'root' && adminPassword.value === 'master') {
+                adminLoginBox.style.display = 'none';
+                adminPanel.style.display = 'block';
+                adminLoginError.style.display = 'none';
+                atualizarTabelaAdmin();
+            } else {
+                adminLoginError.style.display = 'block';
+            }
         });
 
+        // SAIR DO PAINEL E EXIBIR NOTIFICAÇÃO "ATÉ BREVE!"
         btnLogoutAdmin.addEventListener('click', () => {
             adminPanel.style.display = 'none';
             adminLoginBox.style.display = 'block';
             adminUser.value = '';
             adminPassword.value = '';
-            adminSection.style.display = 'none';
+            adminSection.style.display = 'none'; // Oculta o painel inteiro novamente
 
-            mostrarFeedback(
-                'Até breve! O painel administrativo foi ocultado com segurança.',
-                'Sessão Encerrada',
-                4200
-            );
+            // Configura e dispara a notificação idêntica à de matrícula
+            const feedback = document.getElementById('feedback-sucesso');
+            const badgeText = document.getElementById('badgeText');
+            const textoFeedback = document.getElementById('textoFeedback');
+            
+            badgeText.innerText = "Sessão Encerrada";
+            textoFeedback.innerHTML = "Até breve! O painel administrativo foi ocultado com segurança.";
 
-            window.setTimeout(() => {
-                $('#badgeText').textContent = 'Matrícula Realizada!';
-            }, 4600);
+            feedback.classList.add('mostrar');
+            setTimeout(() => {
+                feedback.classList.remove('mostrar');
+                setTimeout(() => {
+                    badgeText.innerText = "Matrícula Realizada!";
+                }, 400);
+            }, 4200);
         });
 
+        // EXPORTAR DADOS EM JSON
+        const btnExportarJson = document.getElementById('btnExportarJson');
+        btnExportarJson.addEventListener('click', () => {
+            const dadosStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(listaAlunos, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dadosStr);
+            downloadAnchor.setAttribute("download", "alunos_rh_fitness.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        });
+
+        // RENDERIZAR TABELA E ESTATÍSTICAS DO ADMIN
         function atualizarTabelaAdmin() {
-            const tbody = $('#adminTableBody');
+            const tbody = document.getElementById('adminTableBody');
+            tbody.innerHTML = '';
 
-            const estatisticas = listaAlunos.reduce(
-                (acc, aluno) => {
-                    acc.total++;
-                    if (aluno.status === 'ativo') acc.ativos++;
-                    if (aluno.status === 'pendente') acc.pendentes++;
-                    if (aluno.pagamento.includes('Débito Automático')) acc.debitoAuto++;
-                    return acc;
-                },
-                { total: 0, ativos: 0, pendentes: 0, debitoAuto: 0 }
-            );
+            let total = listaAlunos.length;
+            let ativos = 0;
+            let pendentes = 0;
+            let debitoAuto = 0;
 
-            $('#statTotal').textContent = estatisticas.total;
-            $('#statAtivos').textContent = estatisticas.ativos;
-            $('#statPendentes').textContent = estatisticas.pendentes;
-            $('#statDebito').textContent = estatisticas.debitoAuto;
+            listaAlunos.forEach(aluno => {
+                if (aluno.status === 'ativo') ativos++;
+                if (aluno.status === 'pendente') pendentes++;
+                if (aluno.pagamento.includes('Débito Automático')) debitoAuto++;
 
-            tbody.innerHTML = listaAlunos.map((aluno) => {
-                const statusInfo = {
-                    ativo: { classe: 'ativo', texto: 'Ativo' },
-                    pendente: { classe: 'pendente', texto: 'Pendente' },
-                    cancelado: { classe: 'cancelado', texto: 'Cancelado' }
-                }[aluno.status] || { classe: 'cancelado', texto: 'Cancelado' };
+                let badgeClass = aluno.status === 'ativo' ? 'ativo' : aluno.status === 'pendente' ? 'pendente' : 'cancelado';
+                let statusTexto = aluno.status === 'ativo' ? 'Ativo' : aluno.status === 'pendente' ? 'Pendente' : 'Cancelado';
 
-                const acao = aluno.status !== 'cancelado'
-                    ? `<button class="btn-acao btn-cancelar" type="button" data-id="${aluno.id}">
-                        <i class="fa-solid fa-ban"></i> Cancelar
-                       </button>`
-                    : '<span style="color:var(--gray); font-size:11px;">Encerrado</span>';
-
-                return `
-                    <tr>
-                        <td><strong>${escaparHTML(aluno.nome)}</strong></td>
-                        <td>${escaparHTML(aluno.cpf)}</td>
-                        <td>${escaparHTML(aluno.plano)}</td>
-                        <td>${escaparHTML(aluno.pagamento)}</td>
-                        <td><span class="badge ${statusInfo.classe}">${statusInfo.texto}</span></td>
-                        <td>${acao}</td>
-                    </tr>
+                let tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${aluno.nome}</strong></td>
+                    <td>${aluno.cpf}</td>
+                    <td>${aluno.plano}</td>
+                    <td>${aluno.pagamento}</td>
+                    <td><span class="badge ${badgeClass}">${statusTexto}</span></td>
+                    <td>
+                        ${aluno.status !== 'cancelado' ? `<button class="btn-acao" onclick="cancelarInscricao(${aluno.id})"><i class="fa-solid fa-ban"></i> Cancelar</button>` : '<span style="color:var(--gray); font-size:11px;">Encerrado</span>'}
+                    </td>
                 `;
-            }).join('');
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('statTotal').innerText = total;
+            document.getElementById('statAtivos').innerText = ativos;
+            document.getElementById('statPendentes').innerText = pendentes;
+            document.getElementById('statDebito').innerText = debitoAuto;
         }
 
-        $('#adminTableBody').addEventListener('click', (event) => {
-            const botao = event.target.closest('.btn-cancelar');
-            if (!botao) return;
-
-            cancelarInscricao(Number(botao.dataset.id));
-        });
-
-        function cancelarInscricao(id) {
-            const aluno = listaAlunos.find((item) => item.id === id);
-            if (!aluno) return;
-
-            if (!confirm(`Deseja realmente cancelar a inscrição de ${aluno.nome}?`)) return;
-
-            aluno.status = 'cancelado';
-            salvarAlunos();
-        }
-
-        // =========================
-        // MENU MOBILE
-        // =========================
-        const menuToggle = $('#menuToggle');
-        const navMenu = $('#navMenu');
-
-        menuToggle.addEventListener('click', (event) => {
-            event.stopPropagation();
-            navMenu.classList.toggle('ativo');
-        });
-
-        $$('.nav-link').forEach((link) => {
-            link.addEventListener('click', () => navMenu.classList.remove('ativo'));
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                navMenu.classList.remove('ativo');
-            }
-        });
-
-        // =========================
-        // MATRÍCULA
-        // =========================
-        const contactForm = $('#contactForm');
-        const selectPlanoMatricula = $('#planoSelecionado');
-
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const nome = $('#inputNome').value.trim();
-            const cpf = $('#inputCpf').value.trim();
-            const plano = selectPlanoMatricula.value;
-            const formaPagamento = $('#formaPagamento').value;
-
-            const pagamentos = {
-                pix: {
-                    texto: 'PIX (À vista)',
-                    status: 'ativo'
-                },
-                cartao: {
-                    texto: 'Cartão (Débito Automático)',
-                    status: 'ativo'
-                },
-                boleto: {
-                    texto: 'Boleto (Pendente)',
-                    status: 'pendente'
+        // FUNÇÃO DE CANCELAR INSCRIÇÃO
+        window.cancelarInscricao = function(id) {
+            const aluno = listaAlunos.find(a => a.id === id);
+            if (aluno) {
+                if (confirm(`Deseja realmente cancelar a inscrição de ${aluno.nome}?`)) {
+                    aluno.status = 'cancelado';
+                    salvarAlunos();
                 }
+            }
+        };
+
+        // CADASTRO DE NOVA MATRÍCULA VIA FORMULÁRIO
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('inputNome').value;
+            const cpf = document.getElementById('inputCpf').value;
+            const plano = document.getElementById('planoSelecionado').value;
+            const formaPag = document.getElementById('formaPagamento').value;
+
+            let tipoPagamentoFormatado = "PIX (À vista)";
+            let statusInicial = "ativo";
+
+            if (formaPag === 'cartao') {
+                tipoPagamentoFormatado = "Cartão (Débito Automático)";
+                statusInicial = "ativo";
+            } else if (formaPag === 'boleto') {
+                tipoPagamentoFormatado = "Boleto (Pendente)";
+                statusInicial = "pendente";
+            }
+
+            const novoAluno = {
+                id: Date.now(),
+                nome: nome,
+                cpf: cpf,
+                plano: plano,
+                pagamento: tipoPagamentoFormatado,
+                status: statusInicial
             };
 
-            const pagamento = pagamentos[formaPagamento];
-            if (!pagamento) return;
-
-            listaAlunos.push({
-                id: Date.now(),
-                nome,
-                cpf,
-                plano,
-                pagamento: pagamento.texto,
-                status: pagamento.status
-            });
-
+            listaAlunos.push(novoAluno);
             salvarAlunos();
 
-            const mensagem = pagamento.status === 'ativo'
-                ? `Parabéns, ${escaparHTML(nome)}! Sua matrícula está ativa e o acesso liberado.`
-                : 'Matrícula registrada! Aguardando compensação do boleto para liberação.';
-
-            mostrarFeedback(mensagem);
-            contactForm.reset();
-        });
-
-        // Escolha rápida de plano
-        $$('.btn-escolher-plano').forEach((botao) => {
-            botao.addEventListener('click', (event) => {
-                event.preventDefault();
-                selectPlanoMatricula.value = botao.dataset.plano;
-                $('#contato').scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Máscara de CPF
-        $('#inputCpf').addEventListener('input', (event) => {
-            let valor = event.target.value.replace(/\D/g, '').slice(0, 11);
-
-            if (valor.length > 9) {
-                valor = valor.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
-            } else if (valor.length > 6) {
-                valor = valor.replace(/^(\d{3})(\d{3})(\d{3}).*/, '$1.$2.$3');
-            } else if (valor.length > 3) {
-                valor = valor.replace(/^(\d{3})(\d{3}).*/, '$1.$2');
+            const feedback = document.getElementById('feedback-sucesso');
+            const badgeText = document.getElementById('badgeText');
+            const textoFeedback = document.getElementById('textoFeedback');
+            
+            badgeText.innerText = "Matrícula Realizada!";
+            if(statusInicial === 'ativo') {
+                textoFeedback.innerHTML = `Parabéns, ${nome}! Sua matrícula está ativa e o acesso liberado.`;
+            } else {
+                textoFeedback.innerHTML = `Matrícula registrada! Aguardando compensação do boleto para liberação.`;
             }
 
-            event.target.value = valor;
+            feedback.classList.add('mostrar');
+            this.reset();
+            setTimeout(() => feedback.classList.remove('mostrar'), 4800);
         });
 
-        // =========================
-        // CALCULADORA DE IMC
-        // =========================
-        $('#btnCalcularIMC').addEventListener('click', () => {
-            const peso = Number.parseFloat($('#peso').value);
-            const altura = Number.parseFloat($('#altura').value);
-            const resultado = $('#resultado-imc');
-
-            if (!peso || !altura || peso <= 0 || altura <= 0) {
-                resultado.textContent = 'Insira peso e altura válidos!';
-                resultado.style.color = 'var(--primary)';
-                return;
-            }
-
-            const imc = peso / (altura * altura);
-            const classificacao =
-                imc < 18.5 ? 'Abaixo do peso' :
-                imc < 25 ? 'Peso normal' :
-                imc < 30 ? 'Sobrepeso' :
-                'Obesidade';
-
-            resultado.textContent = `Seu IMC é ${imc.toFixed(2)} (${classificacao})`;
-            resultado.style.color = 'white';
-        });
-
-        // =========================
         // CHATBOT
-        // =========================
-        const chatContainer = $('#chatContainer');
-        const chatBtnToggle = $('#chatBtnToggle');
-        const chatCloseBtn = $('#chatCloseBtn');
-        const chatInput = $('#chatInput');
-        const chatSendBtn = $('#chatSendBtn');
-        const chatMessages = $('#chatMessages');
-
-        function alternarChat(abrir) {
-            chatContainer.classList.toggle('ativo', abrir);
-            chatContainer.setAttribute('aria-hidden', String(!abrir));
-
-            if (abrir) chatInput.focus();
-        }
+        const chatContainer = document.getElementById('chatContainer');
+        const chatBtnToggle = document.getElementById('chatBtnToggle');
+        const chatCloseBtn = document.getElementById('chatCloseBtn');
 
         chatBtnToggle.addEventListener('click', () => {
-            alternarChat(!chatContainer.classList.contains('ativo'));
+            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
         });
+        chatCloseBtn.addEventListener('click', () => chatContainer.style.display = 'none');
 
-        chatCloseBtn.addEventListener('click', () => alternarChat(false));
+        const chatInput = document.getElementById('chatInput');
+        const chatSendBtn = document.getElementById('chatSendBtn');
 
         function obterRespostaBot(mensagem) {
-            const texto = normalizarTexto(mensagem);
-
+            const texto = mensagem.toLowerCase();
             const permitidas = [
-                'treino', 'exercicio', 'musculacao', 'funcional', 'cardio',
-                'peso', 'massa', 'hipertrofia', 'emagrecimento', 'plano',
-                'preco', 'valor', 'mensalidade', 'horario', 'funciona',
-                'abre', 'endereco', 'onde', 'local', 'matricula', 'suplemento',
-                'academia', 'imc', 'pagamento', 'pix', 'cartao', 'boleto',
-                'ola', 'oi'
+                'treino', 'exercicio', 'musculacao', 'funcional', 'cardio', 'peso', 'massa', 
+                'hipertrofia', 'emagrecimento', 'plano', 'preco', 'valor', 'mensalidade', 
+                'horario', 'funciona', 'abre', 'endereco', 'onde', 'local', 'matricula', 
+                'suplemento', 'academia', 'imc', 'pagamento', 'pix', 'cartao', 'boleto', 'ola', 'oi'
             ];
 
-            const assuntoValido = permitidas.some((termo) => texto.includes(termo));
+            const assuntoValido = permitidas.some(termo => texto.includes(termo));
 
             if (!assuntoValido) {
-                return 'Opa, foco no treino! Só consigo responder dúvidas referentes à <strong>Academia RH Fitness</strong>, planos, horários ou exercícios.';
+                return "Opa, foco no treino! Só consigo responder dúvidas referentes à <strong>Academia RH Fitness</strong>, planos, horários ou exercícios.";
             }
 
             if (texto.includes('treino') || texto.includes('exercicio')) {
-                return 'Para ótimos resultados, foque em uma execução perfeita. Nossa área de musculação está completa!';
+                return "Para ótimos resultados, foque em uma execução perfeita. Nossa área de musculação está completa!";
+            } else if (texto.includes('plano') || texto.includes('preco') || texto.includes('valor')) {
+                return "Temos o Plano Mensal (R$ 90,00), Semestral (R$ 150,00/mês) e Anual VIP (R$ 250,00/mês).";
+            } else if (texto.includes('horario') || texto.includes('funciona') || texto.includes('abre')) {
+                return "Atendemos de segunda a sexta das 06h às 22h, e aos sábados das 08h às 14h.";
+            } else {
+                return "Perfeito, maromba! Se precisar de detalhes sobre nossos planos ou valores, é só mandar aqui.";
             }
-
-            if (texto.includes('plano') || texto.includes('preco') || texto.includes('valor')) {
-                return 'Temos o Plano Mensal (R$ 90,00), Semestral (R$ 150,00/mês) e Anual VIP (R$ 250,00/mês).';
-            }
-
-            if (texto.includes('horario') || texto.includes('funciona') || texto.includes('abre')) {
-                return 'Atendemos de segunda a sexta das 06h às 22h, e aos sábados das 08h às 14h.';
-            }
-
-            return 'Perfeito, maromba! Se precisar de detalhes sobre nossos planos ou valores, é só mandar aqui.';
-        }
-
-        function adicionarMensagem(texto, remetente) {
-            const mensagem = document.createElement('div');
-            mensagem.className = `message ${remetente}`;
-            mensagem.innerHTML = texto;
-            chatMessages.appendChild(mensagem);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
         function enviarMensagem() {
             const texto = chatInput.value.trim();
             if (!texto) return;
-
-            adicionarMensagem(escaparHTML(texto), 'user');
+            adicionarMensagem(texto, 'user');
             chatInput.value = '';
+            setTimeout(() => {
+                const resposta = obterRespostaBot(texto);
+                adicionarMensagem(resposta, 'bot');
+            }, 500);
+        }
 
-            window.setTimeout(() => {
-                adicionarMensagem(obterRespostaBot(texto), 'bot');
-            }, CONFIG.botDelay);
+        function adicionarMensagem(texto, remetente) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${remetente}`;
+            msgDiv.innerHTML = texto;
+            messagesDiv.appendChild(msgDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
 
         chatSendBtn.addEventListener('click', enviarMensagem);
+        chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') enviarMensagem(); });
 
-        chatInput.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') enviarMensagem();
+        const botoesPlano = document.querySelectorAll('.btn-escolher-plano');
+        const selectPlanoMatricula = document.getElementById('planoSelecionado');
+
+        botoesPlano.forEach(botao => {
+            botao.addEventListener('click', function(e) {
+                e.preventDefault();
+                const planoEscolhido = this.getAttribute('data-plano');
+                selectPlanoMatricula.value = planoEscolhido;
+                document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+            });
         });
 
-        // Renderização inicial
-        atualizarTabelaAdmin();
+        const inputCpf = document.getElementById('inputCpf');
+        inputCpf.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length > 9) {
+                value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
+            } else if (value.length > 6) {
+                value = value.replace(/^(\d{3})(\d{3})(\d{3}).*/, '$1.$2.$3');
+            } else if (value.length > 3) {
+                value = value.replace(/^(\d{3})(\d{3}).*/, '$1.$2');
+            }
+            e.target.value = value;
+        });
+
+        document.getElementById('btnCalcularIMC').addEventListener('click', function() {
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+            const res = document.getElementById('resultado-imc');
+            if (!peso || !altura || peso <= 0 || altura <= 0) {
+                res.innerHTML = "Insira peso e altura válidos!";
+                res.style.color = "#2563eb";
+                return;
+            }
+            const imc = peso / (altura * altura);
+            let classificacao = imc < 18.5 ? "Abaixo do peso" : imc < 25 ? "Peso normal" : imc < 30 ? "Sobrepeso" : "Obesidade";
+            res.innerHTML = `Seu IMC é ${imc.toFixed(2)} (${classificacao})`;
+            res.style.color = "white";
+        });
     </script>
 </body>
 </html>
